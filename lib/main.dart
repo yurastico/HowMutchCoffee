@@ -31,10 +31,17 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String _message = "Good Morning, let's drink our first cup of coffee!";
 
   void _incrementCounter() {
     setState(() {
       _counter++;
+
+      if (_counter > 5) {
+        _message = "Run lola run!";
+      } else if (_counter > 2) {
+        _message = "Calm down!";
+      }
     });
   }
 
@@ -49,9 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
+            Text(_message),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
