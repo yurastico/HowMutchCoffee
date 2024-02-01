@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
         actions: [
           IconButton(
               onPressed: _resetCounter, 
-              icon: Icon(Icons.restart_alt))
+              icon: const Icon(Icons.restart_alt))
         ],
       ),
       body: Center(
