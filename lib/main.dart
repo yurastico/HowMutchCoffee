@@ -46,7 +46,12 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void _resetCounter(){}
+  void _resetCounter(){
+    setState(() {
+      _counter = 0;
+      _message = "Good Morning, let's drink our first cup of coffee!";
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
