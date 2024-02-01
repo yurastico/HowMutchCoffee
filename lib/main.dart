@@ -23,10 +23,14 @@ class _MyAppStatefulState extends State<MyAppStateful> {
             builder: (context) {
               return Column(
                 children: [
-                  const Text('Hello World'),
+                  Text('Hello World ${DateTime.now().millisecond}'),
                   const SizedBox(height: 20),
                   ElevatedButton(
-                    onPressed: () { print('Click!'); },
+                    onPressed: () {
+                      setState(() {
+
+                      });
+                    },
                     child: const Text('A button'),
                   ),
                 ],
@@ -37,5 +41,5 @@ class _MyAppStatefulState extends State<MyAppStateful> {
       ),
     );
   }
-  
+
 }
