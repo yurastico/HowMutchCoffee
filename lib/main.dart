@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(const MyAppStateful());
 
-class MyApp extends StatelessWidget {
+class MyAppStateful extends StatefulWidget {
+  const MyAppStateful({super.key});
 
-  const MyApp({super.key});
+  @override
+  State<MyAppStateful> createState() => _MyAppStatefulState();
+}
+
+class _MyAppStatefulState extends State<MyAppStateful> {
 
   @override
   Widget build(BuildContext context) {
@@ -32,5 +37,5 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+  
 }
-
